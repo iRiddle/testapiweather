@@ -36,7 +36,7 @@ class CardView extends Component {
         </CardActionArea>
         <CardActions>
           <Button size="small" color="primary">
-            В избранн
+            В избранное
           </Button>
           <Link to={`/info/${id}`} className = {classes.btn_link}>
             <Button size="small" color="secondary">

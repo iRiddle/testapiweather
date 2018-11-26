@@ -31,21 +31,17 @@ class Table extends Component {
     const { classes, list } = this.props;
     return (
       <div>
-        {isEmpty(list) ? (
-          <CircularProgress className = {classes.loaderPosition} />
-        ) : (
-          <Grid container className={classes.tablePosition}>
-            {list.map(item => (
-              <Grid item key={item.woeid} xs={3}>
-                <CardView
-                  title={item.title}
-                  loc_type={item.location_type}
-                  id={item.woeid}
-                />
-              </Grid>
-            ))}
-          </Grid>
-        )}
+        <Grid container className={classes.tablePosition}>
+          {list.map(item => (
+            <Grid item key={item.woeid} xs={3}>
+              <CardView
+                title={item.title}
+                loc_type={item.location_type}
+                id={item.woeid}
+              />
+            </Grid>
+          ))}
+        </Grid>
       </div>
     );
   }

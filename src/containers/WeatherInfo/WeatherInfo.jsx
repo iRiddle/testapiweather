@@ -6,9 +6,12 @@ import DetailedList from "../../components/List/List";
 import Grid from "@material-ui/core/Grid";
 
 class WeatherInfo extends Component {
-  state = {
-    id: null
-  };
+  constructor(props){
+    super(props)
+    this.state = {
+      id: null
+    };
+  }
 
   componentDidMount() {
     this.props.getDetailedWeatherAction(this.state.id);

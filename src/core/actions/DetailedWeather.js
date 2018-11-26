@@ -11,7 +11,7 @@ const getDetailedWeather = id => dispatch => {
       dispatch(getDetailedWeatherFulfilled(response.data));
     },
     error => {
-      dispatch(getDetailedWeatherRejected);
+      dispatch(getDetailedWeatherRejected(error));
     }
   );
 };
